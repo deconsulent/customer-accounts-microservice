@@ -4,6 +4,6 @@ This project is a RESTful API for managing customer accounts, developed as part 
 
 ## Build Status
 
-[![Build Status](https://github.com/deconsulent/customer-accounts-microservice/actions/workflows/ci-build.yaml/badge.svg)](https://github.com/deconsulent/customer-accounts-microservice/actions)
+[![Build Status](https://github.com/deconsulent/devops-capstone-project/actions/workflows/ci-build.yaml/badge.svg)](https://github.com/deconsulent/devops-capstone-project/actions)
 
 *(Note: Replace `USERNAME` with your actual GitHub username once the repository is created and the workflow is active).*

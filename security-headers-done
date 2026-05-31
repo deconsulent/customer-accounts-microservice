@@ -1,7 +1,7 @@
 $ nosetests
 
-test_cors_policies (tests.test_security) ... ok
-test_security_headers (tests.test_security) ... ok
+It should return a CORS header (tests.test_security) ... ok
+It should return security headers (tests.test_security) ... ok
 test_create_account (tests.test_routes) ... ok
 ...
 ----------------------------------------------------------------------
