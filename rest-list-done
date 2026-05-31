@@ -1,0 +1,20 @@
+$ curl -X GET http://localhost:8080/accounts
+
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "john@example.com",
+    "address": "123 Main St",
+    "phone_number": "555-1234",
+    "date_joined": "2026-05-31"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "email": "jane@example.com",
+    "address": "456 Oak Ave",
+    "phone_number": "555-5678",
+    "date_joined": "2026-05-31"
+  }
+]

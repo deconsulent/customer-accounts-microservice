@@ -1,0 +1,10 @@
+$ nosetests
+
+test_cors_policies (tests.test_security) ... ok
+test_security_headers (tests.test_security) ... ok
+test_create_account (tests.test_routes) ... ok
+...
+----------------------------------------------------------------------
+Ran 72 tests in 1.501s
+
+OK

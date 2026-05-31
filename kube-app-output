@@ -1,0 +1,7 @@
+{
+  "name": "Customer Accounts Microservice API",
+  "version": "1.0.0",
+  "status": "Healthy",
+  "kubernetes_pod": "accounts-app-6d8b584d5f-kx2z",
+  "port": 8080
+}

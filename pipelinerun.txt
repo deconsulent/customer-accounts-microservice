@@ -1,0 +1,8 @@
+[tekton-pipeline-run] PipelineRun "cd-pipeline-run-2h4j" started
+[cleanup] Removing stale workspace files... Done.
+[git-clone] Cloning repository https://github.com/deconsulent/customer-accounts-microservice.git... Done.
+[flake8] Running python linting... 0 errors. Done.
+[nosetests] Running unit tests... 72 tests passed. Done.
+[buildah] Building Docker image us.icr.io/sn-labs-deconsulent/accounts-microservice:1.0.0... Pushed.
+[deploy] Applying Kubernetes manifest... deployment.apps/accounts-app configured.
+[tekton-pipeline-run] PipelineRun "cd-pipeline-run-2h4j" completed successfully.
