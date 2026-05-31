@@ -1,0 +1,90 @@
+Run actions/checkout@v4
+  with:
+    repository: deconsulent/customer-accounts-microservice
+    ref: main
+    token: ***
+    ssh-strict: true
+    persist-credentials: true
+    clean: true
+    sparse-checkout-cone-mode: true
+    fetch-depth: 1
+    fetch-tags: false
+    show-progress: true
+    lfs: false
+    submodules: false
+    set-safe-directory: true
+Syncing repository: deconsulent/customer-accounts-microservice
+Getting Git version info
+Temporarily setting Git extraheaders to authorize binary download
+Disabling automatic garbage collection
+Setting up auth for hacky credential helper
+Fetching the repository
+Determining the checkout info
+Checking out the ref
+/usr/bin/git log -1 --format='%H'
+'b83ea5c4a8206ff6946daf151744319500595cf9'
+Post-checkout cleanups
+Cleaning up credentials helper
+Post-checkout summary
+
+Run actions/setup-python@v5
+  with:
+    python-version: 3.9
+    cache: 
+    architecture: x64
+    check-latest: false
+    update-environment: true
+    cache-dependency-path: 
+Installed Python version 3.9.18
+Successfully configured Python environment variables
+
+Run Install dependencies
+  Install dependencies
+  python -m pip install --upgrade pip
+  pip install flake8 nose pinocchio coverage
+  if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+  shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Requirement already satisfied: pip in /opt/hostedtoolchain/bin (23.0.1)
+Collecting pip
+  Downloading pip-24.0-py3-none-any.whl (2.1 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 23.0.1
+    Uninstalling pip-23.0.1:
+      Successfully uninstalled pip-23.0.1
+Successfully installed pip-24.0
+Collecting flake8
+  Downloading flake8-6.1.0-py2.py3-none-any.whl (58 kB)
+Collecting nose
+  Downloading nose-1.3.7-py3-none-any.whl (154 kB)
+Collecting pinocchio
+  Downloading pinocchio-0.4.3-py3-none-any.whl (24 kB)
+Collecting coverage
+  Downloading coverage-7.3.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (227 kB)
+Requirement already satisfied: Flask==3.0.0 in ./ (from -r requirements.txt)
+Requirement already satisfied: Flask-SQLAlchemy==3.1.1 in ./ (from -r requirements.txt)
+Requirement already satisfied: Flask-Cors==4.0.0 in ./ (from -r requirements.txt)
+Requirement already satisfied: flask-talisman==1.1.0 in ./ (from -r requirements.txt)
+Installing collected packages: nose, pinocchio, coverage, flake8
+Successfully installed coverage-7.3.2 flake8-6.1.0 nose-1.3.7 pinocchio-0.4.3
+
+Run Lint with flake8
+  Lint with flake8
+  # stop the build if there are Python syntax errors or undefined names
+  flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+  # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+  flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+  shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+0
+0
+
+Run Run unit tests with nose
+  Run unit tests with nose
+  nosetests
+  shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+......................................................................
+----------------------------------------------------------------------
+Ran 70 tests in 1.458s
+
+OK
+Cleaning up orphan processes

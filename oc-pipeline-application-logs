@@ -1,0 +1,12 @@
+[2026-05-31 01:43:00 +0000] [1] [INFO] Starting gunicorn 20.1.0
+[2026-05-31 01:43:00 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-05-31 01:43:00 +0000] [1] [INFO] Using worker: sync
+[2026-05-31 01:43:00 +0000] [8] [INFO] Booting worker with pid: 8
+[2026-05-31 01:43:01,102] INFO in server: Initializing database...
+[2026-05-31 01:43:01,405] INFO in server: Database initialized successfully.
+[2026-05-31 01:43:01,406] INFO in server: SERVICERUNNING
+[2026-05-31 01:43:01,407] INFO in server: Customer Accounts Microservice starting up on port 8000...
+[2026-05-31 01:43:01,410] INFO in server: Ready to handle incoming HTTP requests.
+10.244.0.1 - - [31/May/2026:01:43:05 +0000] "GET /health HTTP/1.1" 200 18 "-" "kube-probe/1.24"
+10.244.0.1 - - [31/May/2026:01:43:15 +0000] "GET /health HTTP/1.1" 200 18 "-" "kube-probe/1.24"
+10.244.0.5 - - [31/May/2026:01:43:20 +0000] "GET /accounts HTTP/1.1" 200 482 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
